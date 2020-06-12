@@ -38,14 +38,14 @@ namespace PromotionEngine.Domain.PromotionLogic.Tests
         [TestMethod()]
         public void ParseTestListVar2()
         {
-            float sum = 30;
+            float sum = 0;
             DummyCart dummyCart = new DummyCart();
-            var listItems = dummyCart.Generate();
+            var listItems = dummyCart.Generate0Promotion3();
             PromotionType3 promotionType3 = new PromotionType3();
             var cost = promotionType3.Parse(listItems);
 
             Assert.AreEqual(cost, sum);
-            Assert.AreEqual(listItems.Count(), 3);
+            Assert.AreEqual(listItems.Count(), 2);
         }
     }
 }

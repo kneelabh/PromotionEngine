@@ -22,5 +22,16 @@ namespace PromotionEngineTester.Domain.PromotionLogic
 
             return items;
         }
+
+        public List<SKUItems> Generate0Promotion3()
+        {
+            List<SKUItems> items = new List<SKUItems>();
+
+            items.Add(new SKUItems() { count = 5, sKU = new SKU_A() });
+            items.Add(new SKUItems() { count = 2, sKU = new SKU_B() });
+            
+
+            return items;
+        }
     }
 }
