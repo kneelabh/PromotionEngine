@@ -1,5 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PromotionEngine.Domain.PromotionLogic;
+using PromotionEngine.Domain.SKU;
 using PromotionEngineTester.Domain.PromotionLogic;
 using System;
 using System.Collections.Generic;
@@ -21,8 +22,9 @@ namespace PromotionEngine.Domain.PromotionLogic.Tests
             PromotionType3 promotionType3 = new PromotionType3();
             var cost = promotionType3.Parse(listItems);
 
-            Assert.AreEqual(cost, sum);
-            Assert.AreEqual(listItems.Count(), 3);
+            Assert.AreEqual(sum, cost);
+            Assert.AreEqual(3, listItems.Count());
+            Assert.AreEqual(2, listItems.Where(t => t.sKU.GetType() == typeof(SKU_C)).FirstOrDefault().count);
         }
 
         [TestMethod()]
@@ -32,7 +34,7 @@ namespace PromotionEngine.Domain.PromotionLogic.Tests
             PromotionType3 promotionType3 = new PromotionType3();
             var cost = promotionType3.Parse(new List<SKUItems>());
 
-            Assert.AreEqual(cost, sum);
+            Assert.AreEqual(sum, cost);
         }
 
         [TestMethod()]
@@ -44,8 +46,8 @@ namespace PromotionEngine.Domain.PromotionLogic.Tests
             PromotionType3 promotionType3 = new PromotionType3();
             var cost = promotionType3.Parse(listItems);
 
-            Assert.AreEqual(cost, sum);
-            Assert.AreEqual(listItems.Count(), 2);
+            Assert.AreEqual(sum, cost);
+            Assert.AreEqual(2, listItems.Count());
         }
     }
 }

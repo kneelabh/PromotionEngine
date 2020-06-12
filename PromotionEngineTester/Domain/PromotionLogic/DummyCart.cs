@@ -15,7 +15,7 @@ namespace PromotionEngineTester.Domain.PromotionLogic
             List<SKUItems> items = new List<SKUItems>();
 
             items.Add(new SKUItems() { count = 5, sKU = new SKU_A() });
-            items.Add(new SKUItems() { count = 2, sKU = new SKU_B() });
+            items.Add(new SKUItems() { count = 7, sKU = new SKU_B() });
             items.Add(new SKUItems() { count = 3, sKU = new SKU_C() });
             items.Add(new SKUItems() { count = 1, sKU = new SKU_D() });
 
