@@ -1,9 +1,6 @@
 ﻿using PromotionEngine.Domain.SKU;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PromotionEngine.Domain.PromotionLogic
 {
@@ -23,7 +20,7 @@ namespace PromotionEngine.Domain.PromotionLogic
                 listSKU.Remove(eligibleItems);
                 totalCost = (eligibleItems.count / countOfSKU) * cost;
             }
-                return totalCost;
+            return totalCost;
         }
 
 

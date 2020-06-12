@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PromotionEngine.Domain.SKU
+﻿namespace PromotionEngine.Domain.SKU
 {
-    public struct SKU_B :ISKU
+    public struct SKU_B : ISKU
     {
         public string SKU_Id
         {
