@@ -1,10 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PromotionEngine.Domain;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using PromotionEngineTester.Domain;
 
 namespace PromotionEngine.Domain.Tests
 {
@@ -14,7 +9,13 @@ namespace PromotionEngine.Domain.Tests
         [TestMethod()]
         public void ParseCostTest()
         {
+            DummyCart dummyCart = new DummyCart();
 
+            Domain.Engine engine = new Engine();
+            var cost = engine.ParseCost(dummyCart.Generate());
+
+            Assert.AreEqual(465, cost);
         }
+
     }
 }

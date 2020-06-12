@@ -16,8 +16,14 @@ namespace PromotionEngine.Domain.PromotionLogic
 
             if (eligibleItems != null)
             {
-                listSKU.Remove(eligibleItems);
-                totalCost = (eligibleItems.count / countOfSKU) * cost;
+                int discountCount = (eligibleItems.count / countOfSKU);
+
+                totalCost = discountCount * cost;
+                if (eligibleItems.count > (discountCount * countOfSKU))
+                    listSKU.Where(t => t.sKU.GetType() == offerSKU.GetType()).FirstOrDefault().count -= (discountCount * countOfSKU);
+                else
+                    listSKU.Remove(eligibleItems);
+
             }
             return totalCost;
         }

@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\EngineTests.cs" />
-    <Compile Include="Domain\InputParserTest.cs" />
-    <Compile Include="Domain\PromotionLogic\DummyCart.cs" />
+    <Compile Include="Domain\InputParserTests.cs" />
+    <Compile Include="Domain\DummyCart.cs" />
     <Compile Include="Domain\PromotionLogic\PromotionType1Tests.cs" />
     <Compile Include="Domain\PromotionLogic\PromotionType2Tests.cs" />
     <Compile Include="Domain\PromotionLogic\PromotionType3Tests.cs" />

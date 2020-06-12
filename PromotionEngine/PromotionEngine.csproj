@@ -43,11 +43,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Engine.cs" />
+    <Compile Include="Domain\InputParser.cs" />
+    <Compile Include="Domain\ISKU.cs" />
+    <Compile Include="Domain\IPromotionParser.cs" />
+    <Compile Include="Domain\PromotionLogic\PromotionType3.cs" />
+    <Compile Include="Domain\PromotionLogic\PromotionType2.cs" />
+    <Compile Include="Domain\PromotionLogic\PromotionType1.cs" />
+    <Compile Include="Domain\SKUItems.cs" />
+    <Compile Include="Domain\SKU\SKU_D.cs" />
+    <Compile Include="Domain\SKU\SKU_C.cs" />
+    <Compile Include="Domain\SKU\SKU_B.cs" />
+    <Compile Include="Domain\SKU\SKU_A.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

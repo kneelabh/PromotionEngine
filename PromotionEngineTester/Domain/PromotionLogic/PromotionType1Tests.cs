@@ -18,7 +18,7 @@ namespace PromotionEngine.Domain.PromotionLogic.Tests
             var cost = PromotionType1.Parse(listItems);
 
             Assert.AreEqual(sum, cost);
-            Assert.AreEqual(3, listItems.Count());
+            Assert.AreEqual(4, listItems.Count());
         }
 
         [TestMethod()]
@@ -41,7 +41,7 @@ namespace PromotionEngine.Domain.PromotionLogic.Tests
             var cost = PromotionType1.Parse(listItems);
 
             Assert.AreEqual(sum, cost);
-            Assert.AreEqual(1, listItems.Count());
+            Assert.AreEqual(2, listItems.Count());
         }
     }
 }
