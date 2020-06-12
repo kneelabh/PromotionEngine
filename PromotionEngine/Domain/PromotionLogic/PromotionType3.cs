@@ -21,11 +21,13 @@ namespace PromotionEngine.Domain.PromotionLogic
                 {
                     maxEqual = eligibleItems1.count;
                     listSKU.Remove(eligibleItems1);
+                    listSKU.Where(t => t == eligibleItems2).FirstOrDefault().count -= maxEqual; 
                 }
                 else if (eligibleItems2.count < eligibleItems1.count)
                 {
                     maxEqual = eligibleItems2.count;
                     listSKU.Remove(eligibleItems2);
+                    listSKU.Where(t => t == eligibleItems1).FirstOrDefault().count -= maxEqual;
                 }
                 else
                 {
