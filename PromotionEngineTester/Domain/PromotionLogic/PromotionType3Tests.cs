@@ -1,12 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PromotionEngine.Domain.PromotionLogic;
 using PromotionEngine.Domain.SKU;
-using PromotionEngineTester.Domain.PromotionLogic;
-using System;
+using PromotionEngineTester.Domain;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PromotionEngine.Domain.PromotionLogic.Tests
 {

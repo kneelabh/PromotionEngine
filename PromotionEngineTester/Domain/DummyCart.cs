@@ -1,12 +1,8 @@
 ﻿using PromotionEngine.Domain;
 using PromotionEngine.Domain.SKU;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace PromotionEngineTester.Domain.PromotionLogic
+namespace PromotionEngineTester.Domain
 {
     public class DummyCart
     {
@@ -29,9 +25,18 @@ namespace PromotionEngineTester.Domain.PromotionLogic
 
             items.Add(new SKUItems() { count = 5, sKU = new SKU_A() });
             items.Add(new SKUItems() { count = 2, sKU = new SKU_B() });
-            
+
 
             return items;
+        }
+
+        public List<string> RawCart()
+        {
+            List<string> listSKUCart = new List<string>();
+            listSKUCart.Add("A 5");
+            listSKUCart.Add("B 3");
+            listSKUCart.Add("C 1");
+            return listSKUCart;
         }
     }
 }

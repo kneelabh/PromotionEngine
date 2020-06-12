@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using PromotionEngineTester.Domain.PromotionLogic;
+using PromotionEngineTester.Domain;
 using System.Collections.Generic;
 using System.Linq;
 
